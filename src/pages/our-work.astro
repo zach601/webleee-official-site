@@ -1,20 +1,20 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
-import SectionHeader from '../components/SectionHeader.astro';
-import PortfolioCard from '../components/PortfolioCard.astro';
 import CTA from '../components/CTA.astro';
 import { sampleSites } from '../data/site';
 ---
 
 <SiteLayout
   title="Our Work | Webleee"
-  description="Explore fictional demo websites created by Webleee to show different website styles and industries."
+  description="Explore fictional sample websites created by Webleee to show different website styles and industries."
 >
-  <section class="bg-midnight py-20 text-white">
-    <div class="site-shell">
-      <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Our Work</p>
-      <h1 class="mt-5 max-w-4xl font-display text-5xl font-black leading-tight sm:text-6xl">Fictional demo websites for different business styles.</h1>
-      <p class="mt-6 max-w-3xl text-lg leading-8 text-white/68">
+  <section class="bg-midnight text-white">
+    <div class="site-shell grid gap-10 py-20 lg:grid-cols-[0.72fr_1.28fr] lg:items-end">
+      <div>
+        <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Our Work</p>
+        <h1 class="mt-5 font-display text-5xl font-black leading-tight sm:text-6xl">Sample websites with different industry personalities.</h1>
+      </div>
+      <p class="max-w-3xl text-lg leading-8 text-white/68">
         These are fictional demo websites created by Webleee to show different styles and industries. They are not real client projects.
       </p>
     </div>
@@ -22,30 +22,49 @@ import { sampleSites } from '../data/site';
 
   <section class="bg-white py-20">
     <div class="site-shell">
-      <SectionHeader
-        eyebrow="Website examples"
-        title="Explore demo websites built by Webleee."
-        copy="Use these fictional examples to compare different layouts, tones, and visual directions. Buttons open each demo site in a new tab."
-      />
-      <div class="mt-10 grid gap-6 lg:grid-cols-3">
-        {sampleSites.map((site) => <PortfolioCard site={site} />)}
+      <div class="grid gap-8">
+        {sampleSites.map((site, index) => (
+          <article class="grid overflow-hidden rounded-[34px] border border-line bg-white shadow-sm lg:grid-cols-[0.95fr_1.05fr]">
+            <div class={`relative min-h-[320px] bg-navy ${index % 2 === 1 ? 'lg:order-2' : ''}`}>
+              <img
+                src={site.image}
+                alt={site.imageAlt}
+                width="1280"
+                height="900"
+                loading="eager"
+                decoding="async"
+                class="h-full w-full object-cover object-top"
+              />
+              <span class="absolute left-5 top-5 rounded-xl bg-lime px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-midnight">Live demo</span>
+            </div>
+            <div class="flex flex-col justify-between p-7 lg:p-9">
+              <div>
+                <p class="text-xs font-black uppercase tracking-[0.16em] text-electric">{site.industry}</p>
+                <h2 class="mt-4 font-display text-4xl font-black leading-tight text-navy">{site.name}</h2>
+                <p class="mt-4 text-sm font-black text-navy/72">{site.style}</p>
+                <p class="mt-5 max-w-2xl text-base leading-8 text-slatebody">{site.description}</p>
+              </div>
+              <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+                <a href={site.url} target="_blank" rel="noopener noreferrer" class="btn-primary" aria-label={`View ${site.name} demo site`}>View demo site</a>
+                <span class="inline-flex min-h-12 items-center rounded-2xl border border-line bg-fog px-5 py-3 text-sm font-black text-slatebody">Fictional sample</span>
+              </div>
+            </div>
+          </article>
+        ))}
       </div>
     </div>
   </section>
 
   <section class="bg-fog py-20">
-    <div class="site-shell grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+    <div class="site-shell grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-center">
       <div>
-        <p class="eyebrow">Why samples?</p>
-        <h2 class="mt-4 heading-lg">Different businesses need different website styles.</h2>
+        <p class="eyebrow">Why these samples exist</p>
+        <h2 class="mt-4 heading-lg">A contractor, dental clinic, restaurant, advisory firm, cybersecurity company, and shop should not share the same website shape.</h2>
       </div>
-      <div class="space-y-5 text-lg leading-8 text-slatebody">
-        <p>
-          A contractor, dental clinic, restaurant, advisory firm, cybersecurity company, and retail catalogue should not all look the same.
-        </p>
-        <p>
-          These fictional demo websites help businesses see how Webleee can adjust layout, tone, colour, and structure for different industries.
-        </p>
+      <div class="grid gap-4 sm:grid-cols-2">
+        {['Industry-specific structure', 'Different visual systems', 'Different conversion paths', 'Different content rhythm'].map((item) => (
+          <div class="border-l-4 border-electric bg-white p-5 font-black text-navy shadow-sm">{item}</div>
+        ))}
       </div>
     </div>
   </section>

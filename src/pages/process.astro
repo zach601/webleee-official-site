@@ -32,13 +32,17 @@ const fullProcess = [
   description="Learn how Webleee takes a business website from enquiry and homepage preview to launch, hosting, and monthly management."
 >
   <section class="bg-midnight py-20 text-white">
-    <div class="site-shell">
-      <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Process</p>
-      <h1 class="mt-5 max-w-4xl font-display text-5xl font-black leading-tight sm:text-6xl">A clear website process from request to monthly management.</h1>
-      <p class="mt-6 max-w-3xl text-lg leading-8 text-white/68">
-        Webleee keeps the website process simple for businesses: share the details, review the homepage preview or proposal, approve the build, launch, then keep improving.
-      </p>
-      <a href="/contact/" class="mt-8 btn-primary">Get a free homepage preview</a>
+    <div class="site-shell grid gap-10 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
+      <div>
+        <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Process</p>
+        <h1 class="mt-5 font-display text-5xl font-black leading-tight sm:text-6xl">From request to launched website, without mystery steps.</h1>
+      </div>
+      <div class="rounded-[32px] border border-white/10 bg-white/7 p-6">
+        <p class="text-lg leading-8 text-white/72">
+          Webleee keeps the website process simple for businesses: share the details, review the homepage preview or proposal, approve the build, launch, then keep improving.
+        </p>
+        <a href="/contact/" class="mt-8 btn-primary">Get a free homepage preview</a>
+      </div>
     </div>
   </section>
 
@@ -49,9 +53,9 @@ const fullProcess = [
         title="Five practical stages."
         copy="Each stage is designed to make the website build easier to understand and easier to manage."
       />
-      <div class="mt-12 space-y-5">
+      <div class="mt-12 space-y-5 border-l-4 border-electric pl-5">
         {fullProcess.map((step, index) => (
-          <article class="grid gap-5 rounded-[30px] border border-line bg-white p-6 shadow-sm lg:grid-cols-[120px_1fr] lg:items-center">
+          <article class="grid gap-5 bg-fog p-6 lg:grid-cols-[120px_1fr] lg:items-center">
             <p class="font-display text-5xl font-black text-electric">{String(index + 1).padStart(2, '0')}</p>
             <div>
               <h2 class="font-display text-3xl font-black">{step.title}</h2>

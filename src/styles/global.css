@@ -31,7 +31,7 @@
   }
 
   .heading-xl {
-    @apply font-display text-5xl font-black leading-[0.98] tracking-normal text-white sm:text-6xl lg:text-7xl;
+    @apply font-display text-5xl font-black leading-[0.95] tracking-normal text-white sm:text-6xl lg:text-7xl;
   }
 
   .heading-lg {
@@ -39,18 +39,18 @@
   }
 
   .btn-primary {
-    @apply inline-flex min-h-12 items-center justify-center rounded-full bg-electric px-6 py-3 text-sm font-black text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-lime/40;
+    @apply inline-flex min-h-12 items-center justify-center rounded-2xl bg-electric px-6 py-3 text-sm font-black text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-lime/40;
   }
 
   .btn-secondary {
-    @apply inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-black text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white hover:text-navy focus:outline-none focus:ring-4 focus:ring-white/20;
+    @apply inline-flex min-h-12 items-center justify-center rounded-2xl border border-white/20 bg-white/10 px-6 py-3 text-sm font-black text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white hover:text-navy focus:outline-none focus:ring-4 focus:ring-white/20;
   }
 
   .btn-light {
-    @apply inline-flex min-h-12 items-center justify-center rounded-full border border-line bg-white px-6 py-3 text-sm font-black text-navy transition hover:-translate-y-0.5 hover:border-electric hover:text-electric focus:outline-none focus:ring-4 focus:ring-electric/15;
+    @apply inline-flex min-h-12 items-center justify-center rounded-2xl border border-line bg-white px-6 py-3 text-sm font-black text-navy transition hover:-translate-y-0.5 hover:border-electric hover:text-electric focus:outline-none focus:ring-4 focus:ring-electric/15;
   }
 
   .card {
-    @apply rounded-[28px] border border-line bg-white shadow-sm;
+    @apply rounded-3xl border border-line bg-white shadow-sm;
   }
 }
