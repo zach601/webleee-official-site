@@ -101,12 +101,12 @@ export const processSteps = [
     copy: 'Share what your business does, who you serve, and what kind of website you need.',
   },
   {
-    title: 'We create a website preview',
-    copy: 'Webleee prepares an initial homepage direction so you can see what your website could look like.',
+    title: 'We prepare a website proposal',
+    copy: 'Webleee prepares a practical website direction and quote based on your business needs.',
   },
   {
     title: 'You request changes',
-    copy: 'You review the preview and request practical changes to layout, copy, visuals, sections, or calls to action.',
+    copy: 'You review the proposed direction and request practical changes to layout, copy, visuals, sections, or calls to action.',
   },
   {
     title: 'We launch your website',
@@ -184,7 +184,7 @@ export const faqs = [
   },
   {
     question: 'Can I request changes?',
-    answer: 'Yes. Website previews and active monthly management include practical change requests, depending on the selected plan and scope.',
+    answer: 'Yes. Website proposals and active monthly management include practical change requests, depending on the selected plan and scope.',
   },
   {
     question: 'What is included in monthly management?',

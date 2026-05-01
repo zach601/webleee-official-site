@@ -1,16 +1,16 @@
 ---
-const { title = 'Want to see what your business website could look like?', copy = 'Request a free homepage preview and see a practical direction before committing to a full build.' } = Astro.props;
+const { title = 'Ready to talk about your business website?', copy = 'Request a website quote and send the details Webleee needs to recommend the right build and monthly management plan.' } = Astro.props;
 ---
 
 <section class="bg-midnight py-20 text-white">
   <div class="site-shell grid gap-8 lg:grid-cols-[1fr_0.7fr] lg:items-center">
     <div>
-      <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Free preview</p>
+      <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Website quote</p>
       <h2 class="mt-4 max-w-4xl font-display text-4xl font-black leading-tight sm:text-5xl">{title}</h2>
       <p class="mt-5 max-w-2xl text-lg leading-8 text-white/66">{copy}</p>
     </div>
     <div class="flex flex-col gap-3 sm:flex-row lg:justify-end">
-      <a href="/contact/" class="btn-primary">Request a free homepage preview</a>
+      <a href="/contact/" class="btn-primary">Request a quote</a>
       <a href="/our-work/" class="btn-secondary">View example websites</a>
     </div>
   </div>
