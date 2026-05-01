@@ -59,38 +59,38 @@ const allStructuredData = [organizationStructuredData, ...structuredDataItems.fi
     ))}
   </head>
   <body>
-    <header class="sticky top-0 z-50 border-b border-white/10 bg-midnight/95 text-white backdrop-blur-xl">
-      <nav class="site-shell flex min-h-[76px] items-center justify-between gap-5 py-3" aria-label="Main navigation">
-        <a href="/" class="flex items-center gap-3" aria-label="Webleee home">
-          <span class="relative grid h-12 w-12 place-items-center rounded-xl bg-electric font-black text-white shadow-glow" aria-hidden="true">
+    <header class="sticky top-0 z-50 border-b border-white/10 bg-midnight text-white">
+      <nav class="site-shell flex min-h-20 items-center justify-between gap-5 py-4" aria-label="Main navigation">
+        <a href="/" class="flex items-center gap-3">
+          <span class="relative grid h-11 w-11 place-items-center rounded-2xl bg-electric font-black text-white shadow-glow" aria-hidden="true">
             W
             <span class="absolute -right-1 -top-1 h-3 w-3 rounded-full bg-lime"></span>
           </span>
           <span>
             <span class="block font-display text-xl font-black leading-none">Webleee</span>
-            <span class="block text-xs font-bold uppercase tracking-[0.16em] text-white/65">Build / Host / Manage</span>
+            <span class="block text-xs font-bold uppercase tracking-[0.16em] text-white/70">Build. Host. Manage.</span>
           </span>
         </a>
-        <div class="hidden items-center gap-7 lg:flex">
+        <div class="hidden items-center gap-1 rounded-full border border-white/10 bg-white/7 p-2 lg:flex">
           {navItems.map((item) => {
             const active = item.href === '/' ? currentPath === '/' : currentPath.startsWith(item.href);
             return (
               <a
                 href={item.href}
-                class={`border-b-2 py-2 text-sm font-black transition ${active ? 'border-lime text-white' : 'border-transparent text-white/62 hover:border-white/30 hover:text-white'}`}
+                class={`rounded-full px-4 py-2 text-sm font-bold transition ${active ? 'bg-white text-navy' : 'text-white/72 hover:bg-white/10 hover:text-white'}`}
               >
                 {item.label}
               </a>
             );
           })}
         </div>
-        <a href="/contact/" class="hidden min-h-12 items-center rounded-2xl border border-lime/35 bg-lime px-5 py-3 text-sm font-black text-midnight transition hover:-translate-y-0.5 hover:bg-white lg:inline-flex">
+        <a href="/contact/" class="hidden rounded-full bg-white px-5 py-3 text-sm font-black text-navy transition hover:-translate-y-0.5 hover:bg-lime lg:inline-flex">
           Get a free homepage preview
         </a>
       </nav>
       <div class="site-shell flex gap-2 overflow-x-auto pb-4 lg:hidden" aria-label="Mobile navigation">
         {navItems.map((item) => (
-          <a href={item.href} class="shrink-0 rounded-xl border border-white/10 bg-white/8 px-4 py-2 text-sm font-bold text-white/75">
+          <a href={item.href} class="shrink-0 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-sm font-bold text-white/75">
             {item.label}
           </a>
         ))}
@@ -100,22 +100,10 @@ const allStructuredData = [organizationStructuredData, ...structuredDataItems.fi
       <slot />
     </main>
     <footer class="bg-midnight text-white">
-      <div class="site-shell border-b border-white/10 py-14">
-        <div class="grid gap-8 rounded-[32px] border border-white/10 bg-white/7 p-6 lg:grid-cols-[1fr_0.55fr] lg:items-center lg:p-8">
-          <div>
-            <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Ready to scope the website?</p>
-            <h2 class="mt-4 max-w-3xl font-display text-4xl font-black leading-tight sm:text-5xl">Send the business details. Webleee will shape the next step.</h2>
-          </div>
-          <div class="flex flex-col gap-3 sm:flex-row lg:justify-end">
-            <a href="/contact/" class="btn-primary">Get a free homepage preview</a>
-            <a href="/our-work/" class="btn-secondary">View example websites</a>
-          </div>
-        </div>
-      </div>
       <div class="site-shell grid gap-10 py-14 lg:grid-cols-[1.1fr_0.8fr_0.8fr_0.9fr]">
         <div>
           <a href="/" class="flex items-center gap-3">
-            <span class="relative grid h-11 w-11 place-items-center rounded-xl bg-electric font-black text-white" aria-hidden="true">
+            <span class="relative grid h-11 w-11 place-items-center rounded-2xl bg-electric font-black text-white" aria-hidden="true">
               W
               <span class="absolute -right-1 -top-1 h-3 w-3 rounded-full bg-lime"></span>
             </span>
@@ -143,7 +131,7 @@ const allStructuredData = [organizationStructuredData, ...structuredDataItems.fi
             <a href="/privacy-policy/" class="text-sm font-semibold text-white/62 transition hover:text-lime">Privacy Policy</a>
             <a href="/terms-of-service/" class="text-sm font-semibold text-white/62 transition hover:text-lime">Terms of Service</a>
           </div>
-          <a href="/contact/" class="mt-6 inline-flex min-h-12 items-center justify-center rounded-2xl bg-lime px-5 py-3 text-sm font-black text-midnight transition hover:-translate-y-0.5 hover:bg-white">
+          <a href="/contact/" class="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-lime px-5 py-3 text-sm font-black text-midnight transition hover:-translate-y-0.5 hover:bg-white">
             Get a free homepage preview
           </a>
         </div>

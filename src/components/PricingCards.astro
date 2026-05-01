@@ -4,7 +4,7 @@ import { pricingPlans } from '../data/site';
 
 <div class="grid gap-5 lg:grid-cols-3">
   {pricingPlans.map((plan) => (
-    <article class={`rounded-3xl border p-7 shadow-sm ${plan.highlighted ? 'border-electric bg-navy text-white shadow-glow' : 'border-line bg-white text-navy'}`}>
+    <article class={`rounded-[30px] border p-7 shadow-sm ${plan.highlighted ? 'border-electric bg-navy text-white shadow-glow' : 'border-line bg-white text-navy'}`}>
       <div class="flex min-h-[160px] flex-col justify-between gap-6">
         <div>
           <p class={`text-xs font-black uppercase tracking-[0.18em] ${plan.highlighted ? 'text-lime' : 'text-electric'}`}>Website plan</p>
@@ -21,7 +21,7 @@ import { pricingPlans } from '../data/site';
           </li>
         ))}
       </ul>
-      <a href="/contact/" class={`mt-8 w-full ${plan.highlighted ? 'inline-flex min-h-12 items-center justify-center rounded-2xl bg-white px-6 py-3 text-sm font-black text-navy transition hover:-translate-y-0.5 hover:bg-lime' : 'btn-light'}`}>
+      <a href="/contact/" class={`mt-8 w-full ${plan.highlighted ? 'inline-flex min-h-12 items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-black text-navy transition hover:-translate-y-0.5 hover:bg-lime' : 'btn-light'}`}>
         Get a free homepage preview
       </a>
     </article>

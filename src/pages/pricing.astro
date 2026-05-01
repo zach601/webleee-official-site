@@ -10,17 +10,13 @@ import CTA from '../components/CTA.astro';
   description="Compare Webleee website build, hosting, and monthly management plan options for small and growing businesses."
 >
   <section class="bg-midnight py-20 text-white">
-    <div class="site-shell grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
-      <div>
-        <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Pricing</p>
-        <h1 class="mt-5 font-display text-5xl font-black leading-tight sm:text-6xl">Website plans built around scope, launch, and monthly care.</h1>
-      </div>
-      <div class="rounded-[32px] border border-white/10 bg-white/7 p-6">
-        <p class="text-lg leading-8 text-white/72">
-          Pricing depends on website size, content needs, launch setup, update needs, and support level. Webleee should confirm real package terms before publishing fixed prices.
-        </p>
-        <a href="/contact/" class="mt-8 btn-primary">Get a free homepage preview</a>
-      </div>
+    <div class="site-shell">
+      <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Pricing</p>
+      <h1 class="mt-5 max-w-4xl font-display text-5xl font-black leading-tight sm:text-6xl">Website plans with build, hosting, and management in mind.</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-white/68">
+        Pricing depends on the size of the website, content needs, launch setup, update needs, and monthly support level.
+      </p>
+      <a href="/contact/" class="mt-8 btn-primary">Get a free homepage preview</a>
     </div>
   </section>
 
@@ -40,7 +36,7 @@ import CTA from '../components/CTA.astro';
         ['Monthly support', 'Update volume, support priority, analytics, and technical management affect the monthly plan.'],
         ['Launch setup', 'Domain/DNS help, Cloudflare deployment, redirects, and form connection should be scoped before launch.'],
       ].map(([title, copy]) => (
-        <article class="border-t-4 border-electric bg-fog p-7">
+        <article class="card p-7">
           <h2 class="font-display text-2xl font-black">{title}</h2>
           <p class="mt-4 text-sm leading-7 text-slatebody">{copy}</p>
         </article>
