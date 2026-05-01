@@ -1,0 +1,146 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import PortfolioCard from '../components/PortfolioCard.astro';
+import PricingCards from '../components/PricingCards.astro';
+import CTA from '../components/CTA.astro';
+import { benefits, demoSites, processSteps, services } from '../data/site';
+---
+
+<SiteLayout
+  title="Webleee | Websites Built, Hosted, and Managed"
+  description="Webleee builds, deploys, hosts, and manages modern websites for businesses that want a professional site without technical stress."
+>
+  <section class="relative overflow-hidden bg-midnight text-white">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(29,124,255,0.32),transparent_34%),linear-gradient(135deg,#030812_0%,#07111f_48%,#0a1830_100%)]"></div>
+    <div class="site-shell relative grid min-h-[calc(100vh-128px)] items-center gap-12 py-16 lg:grid-cols-[0.95fr_1.05fr] lg:py-20">
+      <div class="max-w-3xl">
+        <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Web design and website management</p>
+        <h1 class="mt-6 heading-xl">Websites built, hosted, and managed for growing businesses.</h1>
+        <p class="mt-7 max-w-2xl text-lg leading-8 text-white/70">
+          Webleee helps businesses get a professional website without worrying about hosting, deployment, technical setup, and ongoing updates.
+        </p>
+        <div class="mt-9 flex flex-col gap-3 sm:flex-row">
+          <a href="/contact/" class="btn-primary">Get a free homepage preview</a>
+          <a href="/our-work/" class="btn-secondary">View example websites</a>
+        </div>
+        <div class="mt-10 grid gap-3 sm:grid-cols-3">
+          {['Build', 'Deploy', 'Manage'].map((item) => (
+            <div class="rounded-2xl border border-white/10 bg-white/7 p-4">
+              <p class="font-display text-2xl font-black">{item}</p>
+              <p class="mt-1 text-xs font-bold uppercase tracking-[0.14em] text-white/45">Included workflow</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="relative">
+        <div class="rounded-[36px] border border-white/12 bg-white/8 p-3 shadow-agency backdrop-blur">
+          <div class="rounded-[28px] bg-white p-3">
+            <div class="mb-3 flex gap-2">
+              <span class="h-3 w-3 rounded-full bg-red-400"></span>
+              <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
+              <span class="h-3 w-3 rounded-full bg-lime"></span>
+            </div>
+            <div class="grid gap-3 sm:grid-cols-2">
+              <img src="/work/novamart-home.jpg" alt="NovaMart Home demo website preview" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" />
+              <img src="/work/lumina-dental.jpg" alt="Lumina Dental Studio demo website preview" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" />
+              <img src="/work/apexbuild.jpg" alt="ApexBuild Construction demo website preview" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" />
+              <div class="rounded-2xl bg-navy p-6 text-white">
+                <p class="text-xs font-black uppercase tracking-[0.16em] text-lime">Managed website</p>
+                <p class="mt-4 font-display text-3xl font-black">Design, launch, hosting, updates.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-20">
+    <div class="site-shell">
+      <SectionHeader
+        eyebrow="What businesses get"
+        title="A website partner for the parts most businesses do not want to manage."
+        copy="Webleee combines the website build with hosting, launch support, technical setup, and ongoing monthly management."
+      />
+      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {benefits.map((benefit) => (
+          <div class="rounded-3xl border border-line bg-fog p-5">
+            <span class="mb-4 block h-2 w-12 rounded-full bg-electric"></span>
+            <h3 class="font-display text-xl font-black text-navy">{benefit}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-fog py-20">
+    <div class="site-shell">
+      <SectionHeader
+        eyebrow="What Webleee does"
+        title="Your website handled from first preview to monthly support."
+        copy="The goal is simple: make it easier for a business to look professional online without managing the technical work alone."
+      />
+      <div class="mt-10 grid gap-5 lg:grid-cols-4">
+        {services.map((service) => (
+          <article class="card p-7">
+            <h3 class="font-display text-2xl font-black">{service.title}</h3>
+            <p class="mt-4 text-sm leading-7 text-slatebody">{service.copy}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-white py-20">
+    <div class="site-shell">
+      <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+        <SectionHeader
+          eyebrow="Example websites"
+          title="Explore sample websites built by Webleee."
+          copy="Demo websites created to show different styles and industries. These are fictional examples, not real client projects."
+        />
+        <a href="/our-work/" class="btn-light self-start lg:self-auto">View All Examples</a>
+      </div>
+      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+        {demoSites.slice(0, 6).map((site) => <PortfolioCard site={site} featured />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-navy py-20 text-white">
+    <div class="site-shell">
+      <SectionHeader
+        eyebrow="Process preview"
+        title="A straightforward path from idea to live website."
+        copy="You stay focused on your business while Webleee handles the structure, build, launch, and management."
+        light
+      />
+      <div class="mt-10 grid gap-5 lg:grid-cols-5">
+        {processSteps.map((step, index) => (
+          <article class="rounded-[28px] border border-white/10 bg-white/7 p-6">
+            <p class="font-display text-4xl font-black text-lime">{index + 1}</p>
+            <h3 class="mt-5 font-display text-xl font-black">{step.title}</h3>
+            <p class="mt-4 text-sm leading-7 text-white/62">{step.copy}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-fog py-20">
+    <div class="site-shell">
+      <div class="mb-10 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+        <SectionHeader
+          eyebrow="Pricing preview"
+          title="Plans for different business stages."
+          copy="Exact pricing should be confirmed after Webleee understands the website size, content needs, update needs, and support level."
+        />
+        <a href="/pricing/" class="btn-light self-start lg:self-auto">Compare Plans</a>
+      </div>
+      <PricingCards />
+    </div>
+  </section>
+
+  <CTA />
+</SiteLayout>

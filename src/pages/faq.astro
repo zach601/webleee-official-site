@@ -1,0 +1,41 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import CTA from '../components/CTA.astro';
+import { faqs } from '../data/site';
+---
+
+<SiteLayout
+  title="FAQ | Webleee"
+  description="Frequently asked questions about Webleee website builds, hosting, domains, updates, management, and demo portfolio examples."
+>
+  <section class="bg-midnight py-20 text-white">
+    <div class="site-shell">
+      <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">FAQ</p>
+      <h1 class="mt-5 max-w-4xl font-display text-5xl font-black leading-tight sm:text-6xl">Questions businesses ask before hiring Webleee.</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-white/68">
+        Straight answers about builds, hosting, domains, updates, management, ecommerce scope, and the demo portfolio.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-fog py-20">
+    <div class="site-shell">
+      <SectionHeader
+        eyebrow="Answers"
+        title="Website build and management FAQ."
+        copy="These answers should be reviewed and adjusted once Webleee finalises exact terms, cancellation rules, and service scope."
+      />
+      <div class="mt-10 grid gap-5 lg:grid-cols-2">
+        {faqs.map((faq) => (
+          <article class="card p-7">
+            <h2 class="font-display text-2xl font-black">{faq.question}</h2>
+            <p class="mt-4 text-sm leading-7 text-slatebody">{faq.answer}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <CTA title="Still have a question about your website?" copy="Send the details and Webleee can respond with a practical next step." />
+</SiteLayout>

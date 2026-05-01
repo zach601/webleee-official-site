@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white text-navy antialiased;
+  }
+
+  ::selection {
+    @apply bg-electric text-white;
+  }
+}
+
+@layer components {
+  .site-shell {
+    @apply mx-auto w-full max-w-7xl px-5 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply text-xs font-black uppercase tracking-[0.18em] text-electric;
+  }
+
+  .heading-xl {
+    @apply font-display text-5xl font-black leading-[0.98] tracking-normal text-white sm:text-6xl lg:text-7xl;
+  }
+
+  .heading-lg {
+    @apply font-display text-4xl font-black leading-tight tracking-normal text-navy sm:text-5xl;
+  }
+
+  .btn-primary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full bg-electric px-6 py-3 text-sm font-black text-white shadow-glow transition hover:-translate-y-0.5 hover:bg-blue-500 focus:outline-none focus:ring-4 focus:ring-electric/25;
+  }
+
+  .btn-secondary {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-black text-white backdrop-blur transition hover:-translate-y-0.5 hover:bg-white hover:text-navy focus:outline-none focus:ring-4 focus:ring-white/20;
+  }
+
+  .btn-light {
+    @apply inline-flex min-h-12 items-center justify-center rounded-full border border-line bg-white px-6 py-3 text-sm font-black text-navy transition hover:-translate-y-0.5 hover:border-electric hover:text-electric focus:outline-none focus:ring-4 focus:ring-electric/15;
+  }
+
+  .card {
+    @apply rounded-[28px] border border-line bg-white shadow-sm;
+  }
+}

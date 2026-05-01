@@ -1,0 +1,47 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import PricingCards from '../components/PricingCards.astro';
+import CTA from '../components/CTA.astro';
+---
+
+<SiteLayout
+  title="Pricing | Webleee"
+  description="Compare Webleee website build, hosting, and monthly management plan options for small and growing businesses."
+>
+  <section class="bg-midnight py-20 text-white">
+    <div class="site-shell">
+      <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Pricing</p>
+      <h1 class="mt-5 max-w-4xl font-display text-5xl font-black leading-tight sm:text-6xl">Website plans with build, hosting, and management in mind.</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-white/68">
+        Pricing placeholders are shown until Webleee confirms real monthly pricing and package terms. Request a quote for a specific business website.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-fog py-20">
+    <div class="site-shell">
+      <PricingCards />
+      <p class="mt-8 rounded-3xl border border-line bg-white p-5 text-sm leading-7 text-slatebody">
+        Pricing honesty: exact pricing is not invented here. Replace “From R___/month” and “Custom quote” with real Webleee pricing before using this as the public production site.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white py-20">
+    <div class="site-shell grid gap-8 lg:grid-cols-3">
+      {[
+        ['Build scope', 'Number of pages, content complexity, forms, visuals, and custom sections affect the build scope.'],
+        ['Monthly support', 'Update volume, support priority, analytics, and technical management affect the monthly plan.'],
+        ['Launch setup', 'Domain/DNS help, Cloudflare deployment, redirects, and form connection should be scoped before launch.'],
+      ].map(([title, copy]) => (
+        <article class="card p-7">
+          <h2 class="font-display text-2xl font-black">{title}</h2>
+          <p class="mt-4 text-sm leading-7 text-slatebody">{copy}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <CTA title="Need a clear quote for your business website?" copy="Send your business details and Webleee can prepare a practical website direction and quote." />
+</SiteLayout>

@@ -1,0 +1,54 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import PortfolioCard from '../components/PortfolioCard.astro';
+import CTA from '../components/CTA.astro';
+import { demoSites } from '../data/site';
+---
+
+<SiteLayout
+  title="Our Work | Webleee"
+  description="Explore fictional demo websites created by Webleee to show different website styles and industries."
+>
+  <section class="bg-midnight py-20 text-white">
+    <div class="site-shell">
+      <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Our Work</p>
+      <h1 class="mt-5 max-w-4xl font-display text-5xl font-black leading-tight sm:text-6xl">Demo websites created to show different styles and industries.</h1>
+      <p class="mt-6 max-w-3xl text-lg leading-8 text-white/68">
+        These are fictional demo websites created by Webleee to show different website styles and industries. They are not real client projects.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-white py-20">
+    <div class="site-shell">
+      <SectionHeader
+        eyebrow="Portfolio examples"
+        title="Explore sample websites built by Webleee."
+        copy="Every card below is clearly marked as a fictional demo website. Live buttons open the sample websites in a new tab."
+      />
+      <div class="mt-10 grid gap-6 lg:grid-cols-3">
+        {demoSites.map((site) => <PortfolioCard site={site} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-fog py-20">
+    <div class="site-shell grid gap-8 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+      <div>
+        <p class="eyebrow">Why demos?</p>
+        <h2 class="mt-4 heading-lg">Different businesses need different website styles.</h2>
+      </div>
+      <div class="space-y-5 text-lg leading-8 text-slatebody">
+        <p>
+          A contractor, dental clinic, restaurant, advisory firm, cybersecurity company, and retail catalogue should not all look the same.
+        </p>
+        <p>
+          These sample websites help businesses see how Webleee can adjust layout, tone, colour, and structure for different industries.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <CTA />
+</SiteLayout>

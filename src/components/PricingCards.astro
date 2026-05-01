@@ -1,0 +1,29 @@
+---
+import { pricingPlans } from '../data/site';
+---
+
+<div class="grid gap-5 lg:grid-cols-3">
+  {pricingPlans.map((plan) => (
+    <article class={`rounded-[30px] border p-7 shadow-sm ${plan.highlighted ? 'border-electric bg-navy text-white shadow-glow' : 'border-line bg-white text-navy'}`}>
+      <div class="flex min-h-[160px] flex-col justify-between gap-6">
+        <div>
+          <p class={`text-xs font-black uppercase tracking-[0.18em] ${plan.highlighted ? 'text-lime' : 'text-electric'}`}>Website plan</p>
+          <h3 class="mt-4 font-display text-3xl font-black">{plan.name}</h3>
+          <p class={`mt-4 text-sm leading-7 ${plan.highlighted ? 'text-white/68' : 'text-slatebody'}`}>{plan.fit}</p>
+        </div>
+        <p class="font-display text-3xl font-black">{plan.price}</p>
+      </div>
+      <ul class="mt-8 space-y-3">
+        {plan.features.map((feature) => (
+          <li class="flex gap-3 text-sm font-semibold">
+            <span class={`mt-1 h-2.5 w-2.5 shrink-0 rounded-full ${plan.highlighted ? 'bg-lime' : 'bg-electric'}`}></span>
+            <span class={plan.highlighted ? 'text-white/78' : 'text-navy/72'}>{feature}</span>
+          </li>
+        ))}
+      </ul>
+      <a href="/contact/" class={`mt-8 w-full ${plan.highlighted ? 'inline-flex min-h-12 items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-black text-navy transition hover:-translate-y-0.5 hover:bg-lime' : 'btn-light'}`}>
+        Request Quote
+      </a>
+    </article>
+  ))}
+</div>
