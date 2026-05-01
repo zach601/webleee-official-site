@@ -203,8 +203,8 @@ export const faqs = [
     answer: 'Webleee currently presents lightweight modern static websites. WordPress requirements should be discussed before quoting.',
   },
   {
-    question: 'Are the portfolio websites client projects?',
-    answer: 'The websites shown are sample websites created by Webleee to show different styles and industries. They are examples, not client case studies.',
+    question: 'What are the website examples?',
+    answer: 'They are sample website styles created by Webleee to show what different industries could look like online.',
   },
   {
     question: 'Can you redesign my old website?',

@@ -65,7 +65,7 @@ https://webleee-official-site.pages.dev
 - Meridian & Co Advisors: https://webleee-advisors-demo.pages.dev/
 - NovaMart Home: https://webleee-retail-demo.pages.dev/
 
-These are sample websites created by Webleee to show different styles and industries. They are examples, not client case studies.
+These are sample website styles created by Webleee to show different industries and visual directions.
 
 ## Contact Form TODO
 
