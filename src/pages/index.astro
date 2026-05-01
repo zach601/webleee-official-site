@@ -21,8 +21,8 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
           Webleee helps businesses get a professional website without worrying about hosting, deployment, technical setup, and ongoing updates.
         </p>
         <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-          <a href="/contact/" class="btn-primary">Request a quote</a>
-          <a href="/our-work/" class="btn-secondary">View example websites</a>
+          <a href="/contact/" class="btn-primary">Get a free homepage preview</a>
+          <a href="/our-work/" class="btn-secondary">View demo websites</a>
         </div>
         <div class="mt-10 grid gap-3 sm:grid-cols-3">
           {['Build', 'Deploy', 'Manage'].map((item) => (
@@ -42,9 +42,9 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
               <span class="h-3 w-3 rounded-full bg-lime"></span>
             </div>
             <div class="grid gap-3 sm:grid-cols-2">
-              <img src="/work/novamart-home.jpg" alt="NovaMart Home sample website" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" />
-              <img src="/work/lumina-dental.jpg" alt="Lumina Dental Studio sample website" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" />
-              <img src="/work/apexbuild.jpg" alt="ApexBuild Construction sample website" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" />
+              <img src="/work/novamart-home.jpg" alt="NovaMart Home fictional demo website preview" width="1280" height="900" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" decoding="async" />
+              <img src="/work/lumina-dental.jpg" alt="Lumina Dental Studio fictional demo website preview" width="1280" height="900" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" loading="lazy" decoding="async" />
+              <img src="/work/apexbuild.jpg" alt="ApexBuild Construction fictional demo website preview" width="1280" height="900" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" loading="lazy" decoding="async" />
               <div class="rounded-2xl bg-navy p-6 text-white">
                 <p class="text-xs font-black uppercase tracking-[0.16em] text-lime">Managed website</p>
                 <p class="mt-4 font-display text-3xl font-black">Design, launch, hosting, updates.</p>
@@ -97,10 +97,10 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
       <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
         <SectionHeader
           eyebrow="Example websites"
-          title="Explore website styles built by Webleee."
-          copy="A quick look at different industries, layouts, tones, and visual directions Webleee can create."
+          title="Explore fictional demo websites built by Webleee."
+          copy="These are fictional demo websites created by Webleee to show different styles and industries. They are not real client projects."
         />
-        <a href="/our-work/" class="btn-light self-start lg:self-auto">View All Examples</a>
+        <a href="/our-work/" class="btn-light self-start lg:self-auto">View demo websites</a>
       </div>
       <div class="mt-10 grid gap-6 lg:grid-cols-3">
         {sampleSites.slice(0, 6).map((site) => <PortfolioCard site={site} featured />)}
@@ -136,7 +136,7 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
           title="Plans for different business stages."
           copy="Exact pricing should be confirmed after Webleee understands the website size, content needs, update needs, and support level."
         />
-        <a href="/pricing/" class="btn-light self-start lg:self-auto">Compare Plans</a>
+        <a href="/pricing/" class="btn-light self-start lg:self-auto">Compare website plans</a>
       </div>
       <PricingCards />
     </div>

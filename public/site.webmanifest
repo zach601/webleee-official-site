@@ -1,0 +1,17 @@
+{
+  "name": "Webleee",
+  "short_name": "Webleee",
+  "description": "Webleee builds, hosts, deploys, and manages modern websites for businesses.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#030812",
+  "theme_color": "#030812",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

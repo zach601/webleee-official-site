@@ -12,54 +12,60 @@ export const sampleSites = [
     name: 'Sentinel Shield Cybersecurity',
     industry: 'Cybersecurity / technology',
     style: 'Dark, premium, high-value B2B',
-    description: 'Premium dark website style for a cybersecurity and technology business.',
+    description: 'Fictional demo website with a premium dark style for a cybersecurity and technology business.',
     url: 'https://webleee-cybersecurity-demo.pages.dev/',
     image: '/work/sentinel-shield.jpg',
+    imageAlt: 'Sentinel Shield Cybersecurity fictional demo website preview',
     live: true,
   },
   {
     name: 'ApexBuild Construction',
     industry: 'Construction / contractors',
     style: 'Bold, industrial, premium',
-    description: 'Bold industrial website style for a construction and renovation company.',
+    description: 'Fictional demo website with a bold industrial style for a construction and renovation company.',
     url: 'https://webleee-construction-demo.pages.dev/',
     image: '/work/apexbuild.jpg',
+    imageAlt: 'ApexBuild Construction fictional demo website preview',
     live: true,
   },
   {
     name: 'Lumina Dental Studio',
     industry: 'Dental / healthcare',
     style: 'Clean, calm, trustworthy',
-    description: 'Clean calming website style for a dental clinic or healthcare practice.',
+    description: 'Fictional demo website with a clean calming style for a dental clinic or healthcare practice.',
     url: 'https://webleee-dental-demo.pages.dev/',
     image: '/work/lumina-dental.jpg',
+    imageAlt: 'Lumina Dental Studio fictional demo website preview',
     live: true,
   },
   {
     name: 'Ember & Oak',
     industry: 'Restaurant / hospitality',
     style: 'Warm, elegant, food-focused',
-    description: 'Warm elegant website style for a premium restaurant or hospitality brand.',
+    description: 'Fictional demo website with a warm elegant style for a premium restaurant or hospitality brand.',
     url: 'https://webleee-restaurant-demo.pages.dev/',
     image: '/work/ember-oak.jpg',
+    imageAlt: 'Ember and Oak fictional demo website preview',
     live: true,
   },
   {
     name: 'Meridian & Co Advisors',
     industry: 'Professional services',
     style: 'Corporate, minimal, trustworthy',
-    description: 'Minimal corporate website style for an advisory or professional services firm.',
+    description: 'Fictional demo website with a minimal corporate style for an advisory or professional services firm.',
     url: 'https://webleee-advisors-demo.pages.dev/',
     image: '/work/meridian-advisors.jpg',
+    imageAlt: 'Meridian and Co Advisors fictional demo website preview',
     live: true,
   },
   {
     name: 'NovaMart Home',
     industry: 'Retail / ecommerce-style',
     style: 'Modern, clean, product-focused',
-    description: 'Modern product-focused website style for a homeware or retail brand.',
+    description: 'Fictional demo website with a modern product-focused style for a homeware or retail brand.',
     url: 'https://webleee-retail-demo.pages.dev/',
     image: '/work/novamart-home.jpg',
+    imageAlt: 'NovaMart Home fictional demo website preview',
     live: true,
   },
 ];
@@ -101,20 +107,20 @@ export const processSteps = [
     copy: 'Share what your business does, who you serve, and what kind of website you need.',
   },
   {
-    title: 'We prepare a website proposal',
-    copy: 'Webleee prepares a practical website direction and quote based on your business needs.',
+    title: 'Webleee creates a homepage preview or proposal',
+    copy: 'Webleee prepares a practical first direction so you can see how your business website could be structured.',
   },
   {
-    title: 'You request changes',
-    copy: 'You review the proposed direction and request practical changes to layout, copy, visuals, sections, or calls to action.',
+    title: 'You review it',
+    copy: 'You check the preview or proposal and decide what needs to change before the full website moves forward.',
   },
   {
-    title: 'We launch your website',
-    copy: 'Once approved, Webleee builds, deploys, tests, and connects the website to your domain.',
+    title: 'Webleee makes changes',
+    copy: 'Webleee adjusts the layout, copy, visuals, sections, and calls to action based on the agreed scope.',
   },
   {
-    title: 'We host and manage it monthly',
-    copy: 'Webleee keeps the site hosted, managed, updated, and supported after launch.',
+    title: 'We launch and manage it',
+    copy: 'Once approved, Webleee deploys the website, connects the domain, and manages the site monthly.',
   },
 ];
 
@@ -122,7 +128,7 @@ export const pricingPlans = [
   {
     name: 'Starter Website',
     fit: 'Good for small businesses that need a simple online presence.',
-    price: 'From R___/month',
+    price: 'Custom quote',
     features: [
       '1-5 pages',
       'Hosting included',
@@ -136,7 +142,7 @@ export const pricingPlans = [
   {
     name: 'Business Website',
     fit: 'Good for growing businesses that need a stronger website.',
-    price: 'Custom quote',
+    price: 'Pricing depends on scope',
     highlighted: true,
     features: [
       '5-10 pages',
@@ -152,7 +158,7 @@ export const pricingPlans = [
   {
     name: 'Premium Website',
     fit: 'Good for higher-value businesses that need a more custom website.',
-    price: 'Custom quote',
+    price: 'Pricing depends on scope',
     features: [
       'More custom design',
       'More pages',
@@ -192,7 +198,7 @@ export const faqs = [
   },
   {
     question: 'What happens if I cancel?',
-    answer: 'The exact cancellation process should be confirmed before launch. Webleee will need clear terms for site files, hosting, domains, and ongoing access.',
+    answer: 'Cancellation terms should be confirmed before work starts. Ownership, hosting access, file handover, domain access, and final payments should be clearly agreed in writing.',
   },
   {
     question: 'Do you build ecommerce websites?',
@@ -204,7 +210,7 @@ export const faqs = [
   },
   {
     question: 'What are the website examples?',
-    answer: 'They are sample website styles created by Webleee to show what different industries could look like online.',
+    answer: 'They are fictional demo websites created by Webleee to show different styles and industries. They are not real client projects.',
   },
   {
     question: 'Can you redesign my old website?',

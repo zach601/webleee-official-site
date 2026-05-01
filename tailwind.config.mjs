@@ -6,16 +6,16 @@ export default {
       colors: {
         navy: '#07111f',
         midnight: '#030812',
-        electric: '#1d7cff',
+        electric: '#0b63e5',
         skywash: '#eaf3ff',
-        lime: '#9cff4f',
+        lime: '#8bea45',
         fog: '#f4f7fb',
         line: '#dce5ef',
         slatebody: '#536173',
       },
       fontFamily: {
-        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        display: ['Manrope', 'Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+        display: ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
       },
       boxShadow: {
         agency: '0 24px 80px rgba(3, 8, 18, 0.14)',

@@ -5,43 +5,40 @@ import CTA from '../components/CTA.astro';
 
 const fullProcess = [
   {
-    title: 'Request a website',
-    copy: 'The business contacts Webleee and explains what they need, what industry they are in, and what the website should help customers do.',
+    title: 'Send business details',
+    copy: 'The business contacts Webleee and explains what they do, who they serve, what kind of website they need, and what the website should help customers do.',
   },
   {
-    title: 'Share business details',
-    copy: 'The business sends their logo, services, contact details, photos, domain information, goals, and any existing website links.',
+    title: 'Share content and access',
+    copy: 'The business sends available logo files, services, contact details, photos, domain information, goals, and any existing website links.',
   },
   {
-    title: 'Webleee prepares a website proposal',
-    copy: 'Webleee prepares a practical website direction for review, usually starting with a homepage structure and key content plan.',
+    title: 'Webleee creates a homepage preview or proposal',
+    copy: 'Webleee prepares a practical first direction for review, usually starting with a homepage structure and key content plan.',
   },
   {
-    title: 'Review and changes',
-    copy: 'The business checks the direction and requests changes to content, sections, tone, visuals, and calls to action.',
+    title: 'Review and request changes',
+    copy: 'The business checks the homepage preview or proposal and Webleee adjusts the layout, copy, visuals, sections, and calls to action based on the agreed scope.',
   },
   {
-    title: 'Launch',
-    copy: 'Webleee deploys the website, checks the production build, and connects the domain once the site is approved.',
-  },
-  {
-    title: 'Monthly management',
-    copy: 'Webleee hosts, manages, updates, and supports the website monthly so the business does not have to handle the technical side alone.',
+    title: 'Launch and monthly management',
+    copy: 'Once approved, Webleee deploys the website, connects the domain, and manages the site monthly so the business does not have to handle the technical side alone.',
   },
 ];
 ---
 
 <SiteLayout
   title="Process | Webleee"
-  description="Learn how Webleee takes a business website from request and proposal to launch, hosting, and monthly management."
+  description="Learn how Webleee takes a business website from enquiry and homepage preview to launch, hosting, and monthly management."
 >
   <section class="bg-midnight py-20 text-white">
     <div class="site-shell">
       <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Process</p>
       <h1 class="mt-5 max-w-4xl font-display text-5xl font-black leading-tight sm:text-6xl">A clear website process from request to monthly management.</h1>
       <p class="mt-6 max-w-3xl text-lg leading-8 text-white/68">
-        Webleee keeps the website process simple for businesses: share the details, review the proposal, approve the build, launch, then keep improving.
+        Webleee keeps the website process simple for businesses: share the details, review the homepage preview or proposal, approve the build, launch, then keep improving.
       </p>
+      <a href="/contact/" class="mt-8 btn-primary">Get a free homepage preview</a>
     </div>
   </section>
 
@@ -49,7 +46,7 @@ const fullProcess = [
     <div class="site-shell">
       <SectionHeader
         eyebrow="How it works"
-        title="Six practical stages."
+        title="Five practical stages."
         copy="Each stage is designed to make the website build easier to understand and easier to manage."
       />
       <div class="mt-12 space-y-5">
@@ -70,7 +67,7 @@ const fullProcess = [
     <div class="site-shell grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
       <div>
         <p class="eyebrow">What to prepare</p>
-        <h2 class="mt-4 heading-lg">The better the input, the stronger the proposal.</h2>
+        <h2 class="mt-4 heading-lg">The better the input, the stronger the preview.</h2>
       </div>
       <div class="grid gap-4 sm:grid-cols-2">
         {['Logo or brand name', 'Services or offers', 'Business contact details', 'Photos or preferred image style', 'Domain details if available', 'Goals for the website'].map((item) => (

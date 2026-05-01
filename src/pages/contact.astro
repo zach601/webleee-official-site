@@ -4,60 +4,60 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 
 <SiteLayout
   title="Contact | Webleee"
-  description="Contact Webleee to request a quote for your business website."
+  description="Contact Webleee to request a homepage preview or quote for your business website."
 >
   <section class="bg-midnight py-20 text-white">
     <div class="site-shell grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
       <div>
         <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Contact Webleee</p>
-        <h1 class="mt-5 max-w-3xl font-display text-5xl font-black leading-tight sm:text-6xl">Request a website quote.</h1>
+        <h1 class="mt-5 max-w-3xl font-display text-5xl font-black leading-tight sm:text-6xl">Get a free homepage preview.</h1>
         <p class="mt-6 max-w-2xl text-lg leading-8 text-white/68">
-          Tell Webleee about your business, what kind of website you need, and what you want customers to do when they land on your site.
+          Tell Webleee about your business, what kind of website you need, and what you want customers to do when they land on your site. The form below is not connected yet, so real enquiry handling still needs to be added before public launch.
         </p>
         <div class="mt-8 grid gap-4">
           <div class="rounded-3xl border border-white/10 bg-white/7 p-5">
-            <p class="text-xs font-black uppercase tracking-[0.16em] text-lime">Email placeholder</p>
+            <p class="text-xs font-black uppercase tracking-[0.16em] text-lime">Email</p>
             <p class="mt-2 font-display text-2xl font-black">To be added</p>
           </div>
           <div class="rounded-3xl border border-white/10 bg-white/7 p-5">
-            <p class="text-xs font-black uppercase tracking-[0.16em] text-lime">WhatsApp placeholder</p>
-            <p class="mt-2 font-display text-2xl font-black">+27 XX XXX XXXX</p>
+            <p class="text-xs font-black uppercase tracking-[0.16em] text-lime">WhatsApp</p>
+            <p class="mt-2 font-display text-2xl font-black">Contact details coming soon</p>
           </div>
           <div class="rounded-3xl border border-white/10 bg-white/7 p-5">
-            <p class="text-xs font-black uppercase tracking-[0.16em] text-lime">Business details placeholder</p>
+            <p class="text-xs font-black uppercase tracking-[0.16em] text-lime">Business details</p>
             <p class="mt-2 text-sm leading-7 text-white/68">Service area, business registration details, social links, and real contact details need to be supplied by Zach.</p>
           </div>
         </div>
       </div>
 
-      <form class="rounded-[34px] bg-white p-6 text-navy shadow-agency sm:p-8" aria-label="Website quote request form">
-        <div class="mb-6 rounded-2xl bg-skywash p-4 text-sm font-semibold leading-6 text-navy">
-          UI-only form for now. Connect this to a real form service or backend before using it for live enquiries.
+      <form class="rounded-[34px] bg-white p-6 text-navy shadow-agency sm:p-8" aria-label="Homepage preview request form">
+        <div id="form-status" class="mb-6 rounded-2xl bg-skywash p-4 text-sm font-semibold leading-6 text-navy">
+          Contact form status: UI-only. It is not connected to a backend yet, so submissions are not sent anywhere.
         </div>
         <div class="grid gap-5 sm:grid-cols-2">
           <div>
             <label for="name" class="text-sm font-black">Name</label>
-            <input id="name" type="text" placeholder="Your name" class="mt-2 min-h-14 w-full rounded-2xl border border-line bg-fog px-4 text-sm outline-none focus:border-electric" />
+            <input id="name" name="name" type="text" placeholder="Your name" required aria-describedby="form-status" class="mt-2 min-h-14 w-full rounded-2xl border border-line bg-fog px-4 text-sm outline-none focus:border-electric focus:ring-4 focus:ring-lime/35" />
           </div>
           <div>
             <label for="business" class="text-sm font-black">Business name</label>
-            <input id="business" type="text" placeholder="Business name" class="mt-2 min-h-14 w-full rounded-2xl border border-line bg-fog px-4 text-sm outline-none focus:border-electric" />
+            <input id="business" name="business" type="text" placeholder="Business name" required class="mt-2 min-h-14 w-full rounded-2xl border border-line bg-fog px-4 text-sm outline-none focus:border-electric focus:ring-4 focus:ring-lime/35" />
           </div>
           <div>
             <label for="email" class="text-sm font-black">Email</label>
-            <input id="email" type="email" placeholder="Your email address" class="mt-2 min-h-14 w-full rounded-2xl border border-line bg-fog px-4 text-sm outline-none focus:border-electric" />
+            <input id="email" name="email" type="email" placeholder="Your email address" required class="mt-2 min-h-14 w-full rounded-2xl border border-line bg-fog px-4 text-sm outline-none focus:border-electric focus:ring-4 focus:ring-lime/35" />
           </div>
           <div>
             <label for="phone" class="text-sm font-black">Phone / WhatsApp</label>
-            <input id="phone" type="tel" placeholder="+27 XX XXX XXXX" class="mt-2 min-h-14 w-full rounded-2xl border border-line bg-fog px-4 text-sm outline-none focus:border-electric" />
+            <input id="phone" name="phone" type="tel" placeholder="Phone or WhatsApp number" class="mt-2 min-h-14 w-full rounded-2xl border border-line bg-fog px-4 text-sm outline-none focus:border-electric focus:ring-4 focus:ring-lime/35" />
           </div>
           <div class="sm:col-span-2">
             <label for="existing" class="text-sm font-black">Existing website, optional</label>
-            <input id="existing" type="url" placeholder="Your current website URL" class="mt-2 min-h-14 w-full rounded-2xl border border-line bg-fog px-4 text-sm outline-none focus:border-electric" />
+            <input id="existing" name="existing_website" type="url" placeholder="Your current website URL" class="mt-2 min-h-14 w-full rounded-2xl border border-line bg-fog px-4 text-sm outline-none focus:border-electric focus:ring-4 focus:ring-lime/35" />
           </div>
           <div class="sm:col-span-2">
             <label for="kind" class="text-sm font-black">What kind of website do you need?</label>
-            <select id="kind" class="mt-2 min-h-14 w-full rounded-2xl border border-line bg-fog px-4 text-sm outline-none focus:border-electric">
+            <select id="kind" name="website_type" required class="mt-2 min-h-14 w-full rounded-2xl border border-line bg-fog px-4 text-sm outline-none focus:border-electric focus:ring-4 focus:ring-lime/35">
               <option>Small business website</option>
               <option>Professional services website</option>
               <option>Contractor / trade business website</option>
@@ -69,11 +69,13 @@ import SiteLayout from '../layouts/SiteLayout.astro';
           </div>
           <div class="sm:col-span-2">
             <label for="message" class="text-sm font-black">Message</label>
-            <textarea id="message" rows="6" placeholder="Tell us about the website you want." class="mt-2 w-full rounded-2xl border border-line bg-fog px-4 py-4 text-sm outline-none focus:border-electric"></textarea>
+            <textarea id="message" name="message" rows="6" placeholder="Tell us about the website you want." required class="mt-2 w-full rounded-2xl border border-line bg-fog px-4 py-4 text-sm outline-none focus:border-electric focus:ring-4 focus:ring-lime/35"></textarea>
           </div>
         </div>
-        <button type="button" class="mt-6 btn-primary">Request a quote</button>
-        <p class="mt-4 text-xs leading-6 text-slatebody">This button is not connected yet. A real destination must be added before launch.</p>
+        <button type="button" class="mt-6 inline-flex min-h-12 items-center justify-center rounded-full border border-line bg-fog px-6 py-3 text-sm font-black text-slatebody">
+          Form not connected yet
+        </button>
+        <p class="mt-4 text-xs leading-6 text-slatebody">Connect this form to a real backend before using it for live enquiries.</p>
       </form>
     </div>
   </section>

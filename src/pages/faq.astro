@@ -3,11 +3,25 @@ import SiteLayout from '../layouts/SiteLayout.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import CTA from '../components/CTA.astro';
 import { faqs } from '../data/site';
+
+const faqStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((faq) => ({
+    '@type': 'Question',
+    name: faq.question,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+    },
+  })),
+};
 ---
 
 <SiteLayout
   title="FAQ | Webleee"
   description="Frequently asked questions about Webleee website builds, hosting, domains, updates, management, and sample portfolio examples."
+  structuredData={faqStructuredData}
 >
   <section class="bg-midnight py-20 text-white">
     <div class="site-shell">
@@ -37,5 +51,5 @@ import { faqs } from '../data/site';
     </div>
   </section>
 
-  <CTA title="Still have a question about your website?" copy="Send the details and Webleee can respond with a practical next step." />
+  <CTA title="Still have a question about your website?" copy="Send the details and Webleee can respond with a practical next step or homepage preview direction." />
 </SiteLayout>
