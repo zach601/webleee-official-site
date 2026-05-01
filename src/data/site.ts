@@ -7,12 +7,12 @@ export const navItems = [
   { href: '/contact/', label: 'Contact' },
 ];
 
-export const demoSites = [
+export const sampleSites = [
   {
     name: 'Sentinel Shield Cybersecurity',
     industry: 'Cybersecurity / technology',
     style: 'Dark, premium, high-value B2B',
-    description: 'Premium dark website for a fictional cybersecurity company.',
+    description: 'Premium dark website style for a cybersecurity and technology business.',
     url: 'https://webleee-cybersecurity-demo.pages.dev/',
     image: '/work/sentinel-shield.jpg',
     live: true,
@@ -21,7 +21,7 @@ export const demoSites = [
     name: 'ApexBuild Construction',
     industry: 'Construction / contractors',
     style: 'Bold, industrial, premium',
-    description: 'Bold industrial website for a fictional construction and renovation company.',
+    description: 'Bold industrial website style for a construction and renovation company.',
     url: 'https://webleee-construction-demo.pages.dev/',
     image: '/work/apexbuild.jpg',
     live: true,
@@ -30,7 +30,7 @@ export const demoSites = [
     name: 'Lumina Dental Studio',
     industry: 'Dental / healthcare',
     style: 'Clean, calm, trustworthy',
-    description: 'Clean calming website for a fictional dental clinic.',
+    description: 'Clean calming website style for a dental clinic or healthcare practice.',
     url: 'https://webleee-dental-demo.pages.dev/',
     image: '/work/lumina-dental.jpg',
     live: true,
@@ -39,7 +39,7 @@ export const demoSites = [
     name: 'Ember & Oak',
     industry: 'Restaurant / hospitality',
     style: 'Warm, elegant, food-focused',
-    description: 'Warm elegant website for a fictional premium restaurant.',
+    description: 'Warm elegant website style for a premium restaurant or hospitality brand.',
     url: 'https://webleee-restaurant-demo.pages.dev/',
     image: '/work/ember-oak.jpg',
     live: true,
@@ -48,7 +48,7 @@ export const demoSites = [
     name: 'Meridian & Co Advisors',
     industry: 'Professional services',
     style: 'Corporate, minimal, trustworthy',
-    description: 'Minimal corporate website for a fictional advisory firm.',
+    description: 'Minimal corporate website style for an advisory or professional services firm.',
     url: 'https://webleee-advisors-demo.pages.dev/',
     image: '/work/meridian-advisors.jpg',
     live: true,
@@ -57,7 +57,7 @@ export const demoSites = [
     name: 'NovaMart Home',
     industry: 'Retail / ecommerce-style',
     style: 'Modern, clean, product-focused',
-    description: 'Modern product-focused website for a fictional homeware retail brand.',
+    description: 'Modern product-focused website style for a homeware or retail brand.',
     url: 'https://webleee-retail-demo.pages.dev/',
     image: '/work/novamart-home.jpg',
     live: true,
@@ -203,8 +203,8 @@ export const faqs = [
     answer: 'Webleee currently presents lightweight modern static websites. WordPress requirements should be discussed before quoting.',
   },
   {
-    question: 'Are the portfolio websites real clients or demos?',
-    answer: 'The websites shown are fictional demo websites created by Webleee to show different styles and industries. They are not real client projects.',
+    question: 'Are the portfolio websites client projects?',
+    answer: 'The websites shown are sample websites created by Webleee to show different styles and industries. They are examples, not client case studies.',
   },
   {
     question: 'Can you redesign my old website?',

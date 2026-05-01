@@ -6,13 +6,10 @@ const { site, featured = false } = Astro.props;
   <div class="relative aspect-[16/10] overflow-hidden bg-navy">
     <img
       src={site.image}
-      alt={`${site.name} demo website screenshot`}
+      alt={`${site.name} sample website screenshot`}
       class="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
       loading="lazy"
     />
-    <div class="absolute left-4 top-4 rounded-full bg-midnight/80 px-3 py-1 text-xs font-black uppercase tracking-[0.14em] text-white backdrop-blur">
-      Demo website
-    </div>
     <div class={`absolute right-4 top-4 rounded-full px-3 py-1 text-xs font-black uppercase tracking-[0.14em] ${site.live ? 'bg-lime text-midnight' : 'bg-white text-navy'}`}>
       {site.live ? 'Live' : 'Coming soon'}
     </div>
@@ -26,11 +23,10 @@ const { site, featured = false } = Astro.props;
     <p class="text-sm leading-7 text-slatebody">{site.description}</p>
     <div class="flex flex-col gap-3 sm:flex-row">
       {site.live ? (
-        <a href={site.url} target="_blank" rel="noreferrer" class="btn-light">View Live Demo</a>
+        <a href={site.url} target="_blank" rel="noreferrer" class="btn-light">View Site</a>
       ) : (
         <span class="inline-flex min-h-12 items-center justify-center rounded-full border border-line bg-fog px-6 py-3 text-sm font-black text-slatebody">Coming Soon</span>
       )}
-      <span class="inline-flex min-h-12 items-center justify-center rounded-full bg-skywash px-4 py-3 text-xs font-black uppercase tracking-[0.14em] text-electric">Fictional demo</span>
     </div>
   </div>
 </article>

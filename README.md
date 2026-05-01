@@ -2,7 +2,7 @@
 
 The real official business website for Webleee.
 
-Webleee builds, deploys, hosts, and manages modern websites for businesses. The site explains the service, shows clearly labelled fictional demo websites, outlines pricing placeholders, explains the process, answers FAQs, and encourages businesses to request a free homepage preview.
+Webleee builds, deploys, hosts, and manages modern websites for businesses. The site explains the service, shows sample websites, outlines pricing placeholders, explains the process, answers FAQs, and encourages businesses to request a free homepage preview.
 
 ## Tech Stack
 
@@ -56,7 +56,7 @@ npm run preview
 
 https://webleee-official-site.pages.dev
 
-## Demo Links Used
+## Sample Website Links Used
 
 - Sentinel Shield Cybersecurity: https://webleee-cybersecurity-demo.pages.dev/
 - ApexBuild Construction: https://webleee-construction-demo.pages.dev/
@@ -65,7 +65,7 @@ https://webleee-official-site.pages.dev
 - Meridian & Co Advisors: https://webleee-advisors-demo.pages.dev/
 - NovaMart Home: https://webleee-retail-demo.pages.dev/
 
-These are fictional demo websites created by Webleee to show different styles and industries. They are not real client projects.
+These are sample websites created by Webleee to show different styles and industries. They are examples, not client case studies.
 
 ## Contact Form TODO
 

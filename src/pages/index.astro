@@ -4,7 +4,7 @@ import SectionHeader from '../components/SectionHeader.astro';
 import PortfolioCard from '../components/PortfolioCard.astro';
 import PricingCards from '../components/PricingCards.astro';
 import CTA from '../components/CTA.astro';
-import { benefits, demoSites, processSteps, services } from '../data/site';
+import { benefits, processSteps, sampleSites, services } from '../data/site';
 ---
 
 <SiteLayout
@@ -42,9 +42,9 @@ import { benefits, demoSites, processSteps, services } from '../data/site';
               <span class="h-3 w-3 rounded-full bg-lime"></span>
             </div>
             <div class="grid gap-3 sm:grid-cols-2">
-              <img src="/work/novamart-home.jpg" alt="NovaMart Home demo website preview" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" />
-              <img src="/work/lumina-dental.jpg" alt="Lumina Dental Studio demo website preview" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" />
-              <img src="/work/apexbuild.jpg" alt="ApexBuild Construction demo website preview" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" />
+              <img src="/work/novamart-home.jpg" alt="NovaMart Home sample website preview" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" />
+              <img src="/work/lumina-dental.jpg" alt="Lumina Dental Studio sample website preview" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" />
+              <img src="/work/apexbuild.jpg" alt="ApexBuild Construction sample website preview" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" />
               <div class="rounded-2xl bg-navy p-6 text-white">
                 <p class="text-xs font-black uppercase tracking-[0.16em] text-lime">Managed website</p>
                 <p class="mt-4 font-display text-3xl font-black">Design, launch, hosting, updates.</p>
@@ -97,13 +97,13 @@ import { benefits, demoSites, processSteps, services } from '../data/site';
       <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
         <SectionHeader
           eyebrow="Example websites"
-          title="Explore sample websites built by Webleee."
-          copy="Demo websites created to show different styles and industries. These are fictional examples, not real client projects."
+          title="Explore website styles built by Webleee."
+          copy="A quick look at different industries, layouts, tones, and visual directions Webleee can create."
         />
         <a href="/our-work/" class="btn-light self-start lg:self-auto">View All Examples</a>
       </div>
       <div class="mt-10 grid gap-6 lg:grid-cols-3">
-        {demoSites.slice(0, 6).map((site) => <PortfolioCard site={site} featured />)}
+        {sampleSites.slice(0, 6).map((site) => <PortfolioCard site={site} featured />)}
       </div>
     </div>
   </section>
