@@ -7,7 +7,10 @@ const {
   description = 'Webleee builds, deploys, hosts, and manages modern websites for businesses.',
 } = Astro.props;
 
+const siteUrl = 'https://www.webleee.com';
 const currentPath = Astro.url.pathname;
+const canonicalUrl = new URL(currentPath, siteUrl).toString();
+const ogImageUrl = new URL('/work/novamart-home.jpg', siteUrl).toString();
 ---
 
 <!doctype html>
@@ -22,7 +25,9 @@ const currentPath = Astro.url.pathname;
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:site_name" content="Webleee" />
-    <meta property="og:image" content="/work/novamart-home.jpg" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImageUrl} />
+    <link rel="canonical" href={canonicalUrl} />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   </head>
   <body>
@@ -93,11 +98,11 @@ const currentPath = Astro.url.pathname;
           </div>
         </div>
         <div>
-          <h2 class="text-sm font-black uppercase tracking-[0.16em] text-white">Contact Placeholders</h2>
+          <h2 class="text-sm font-black uppercase tracking-[0.16em] text-white">Contact Details</h2>
           <div class="mt-5 space-y-3 text-sm leading-6 text-white/62">
-            <p>Email: hello@webleee.example</p>
+            <p>Email: To be added</p>
             <p>WhatsApp: +27 XX XXX XXXX</p>
-            <p>Service area: Needs real information from Zach</p>
+            <p>Website: www.webleee.com</p>
           </div>
         </div>
       </div>

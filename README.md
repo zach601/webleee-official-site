@@ -54,7 +54,9 @@ npm run preview
 
 ## Live URL
 
-https://webleee-official-site.pages.dev
+- Main domain: https://www.webleee.com
+- Root domain: https://webleee.com
+- Cloudflare Pages URL: https://webleee-official-site.pages.dev
 
 ## Sample Website Links Used
 
@@ -78,7 +80,6 @@ The contact form is UI-only. Before using this as the real public Webleee websit
 - Real location or service area
 - Real contact form destination
 - Real pricing
-- Real domain name
 - Real logo and brand assets
 - Real favicon
 - Real social media links
