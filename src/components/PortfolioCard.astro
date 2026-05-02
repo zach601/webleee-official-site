@@ -2,7 +2,7 @@
 const { site, featured = false } = Astro.props;
 ---
 
-<article class={`group overflow-hidden rounded-[30px] border border-line bg-white shadow-sm transition hover:-translate-y-1 hover:shadow-agency ${featured ? 'lg:col-span-1' : ''}`}>
+<article class={`group overflow-hidden rounded-lg border border-line bg-white shadow-sm transition hover:border-electric/40 hover:shadow-agency ${featured ? 'lg:col-span-1' : ''}`}>
   <div class="relative aspect-[16/10] overflow-hidden bg-navy">
     <img
       src={site.image}
@@ -14,7 +14,7 @@ const { site, featured = false } = Astro.props;
       decoding="async"
       sizes="(min-width: 1024px) 33vw, 100vw"
     />
-    <div class={`absolute right-4 top-4 rounded-full px-3 py-1 text-xs font-black uppercase tracking-[0.14em] ${site.live ? 'bg-lime text-midnight' : 'bg-white text-navy'}`}>
+    <div class={`absolute right-4 top-4 rounded-md px-3 py-1 text-xs font-black uppercase tracking-[0.14em] ${site.live ? 'bg-lime text-midnight' : 'bg-white text-navy'}`}>
       {site.live ? 'Live demo' : 'Coming soon'}
     </div>
   </div>
@@ -31,7 +31,7 @@ const { site, featured = false } = Astro.props;
           View demo site
         </a>
       ) : (
-        <span class="inline-flex min-h-12 items-center justify-center rounded-full border border-line bg-fog px-6 py-3 text-sm font-black text-slatebody">Coming Soon</span>
+        <span class="inline-flex min-h-12 items-center justify-center rounded-lg border border-line bg-fog px-6 py-3 text-sm font-black text-slatebody">Coming Soon</span>
       )}
     </div>
   </div>

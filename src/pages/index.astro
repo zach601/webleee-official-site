@@ -11,44 +11,51 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
   title="Webleee | Websites Built, Hosted, and Managed"
   description="Webleee builds, deploys, hosts, and manages modern websites for businesses that want a professional site without technical stress."
 >
-  <section class="relative overflow-hidden bg-midnight text-white">
-    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(29,124,255,0.32),transparent_34%),linear-gradient(135deg,#030812_0%,#07111f_48%,#0a1830_100%)]"></div>
-    <div class="site-shell relative grid min-h-[calc(100vh-128px)] items-center gap-12 py-16 lg:grid-cols-[0.95fr_1.05fr] lg:py-20">
+  <section class="border-b border-line bg-white">
+    <div class="site-shell grid items-center gap-12 py-16 lg:grid-cols-[0.92fr_1.08fr] lg:py-24">
       <div class="max-w-3xl">
-        <p class="text-xs font-black uppercase tracking-[0.18em] text-lime">Web design and website management</p>
+        <p class="eyebrow">Web design and website management</p>
         <h1 class="mt-6 heading-xl">Websites built, hosted, and managed for growing businesses.</h1>
-        <p class="mt-7 max-w-2xl text-lg leading-8 text-white/70">
-          Webleee helps businesses get a professional website without worrying about hosting, deployment, technical setup, and ongoing updates.
+        <p class="mt-7 max-w-2xl text-lg leading-8 text-slatebody">
+          Webleee helps businesses get a professional site live without handling hosting, deployment, DNS, updates, and technical maintenance themselves.
         </p>
         <div class="mt-9 flex flex-col gap-3 sm:flex-row">
           <a href="/contact/" class="btn-primary">Get a free homepage preview</a>
-          <a href="/our-work/" class="btn-secondary">View demo websites</a>
+          <a href="/our-work/" class="btn-secondary">View example websites</a>
         </div>
-        <div class="mt-10 grid gap-3 sm:grid-cols-3">
-          {['Build', 'Deploy', 'Manage'].map((item) => (
-            <div class="rounded-2xl border border-white/10 bg-white/7 p-4">
-              <p class="font-display text-2xl font-black">{item}</p>
-              <p class="mt-1 text-xs font-bold uppercase tracking-[0.14em] text-white/45">Included workflow</p>
+        <div class="mt-10 grid max-w-2xl divide-y divide-line border-y border-line sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+          {[
+            ['Build', 'Professional website structure and page design.'],
+            ['Launch', 'Cloudflare deployment and domain support.'],
+            ['Manage', 'Monthly updates, support, and technical care.']
+          ].map((item) => (
+            <div class="py-5 sm:px-5">
+              <p class="font-display text-2xl font-black text-navy">{item[0]}</p>
+              <p class="mt-2 text-sm leading-6 text-slatebody">{item[1]}</p>
             </div>
           ))}
         </div>
       </div>
-      <div class="relative">
-        <div class="rounded-[36px] border border-white/12 bg-white/8 p-3 shadow-agency backdrop-blur">
-          <div class="rounded-[28px] bg-white p-3">
-            <div class="mb-3 flex gap-2">
-              <span class="h-3 w-3 rounded-full bg-red-400"></span>
-              <span class="h-3 w-3 rounded-full bg-yellow-400"></span>
-              <span class="h-3 w-3 rounded-full bg-lime"></span>
+      <div class="border border-line bg-fog p-4 shadow-agency">
+        <div class="grid gap-4 sm:grid-cols-[1.1fr_0.9fr]">
+          <a href="/our-work/" class="group block overflow-hidden border border-line bg-white">
+            <img src="/work/apexbuild.jpg" alt="ApexBuild Construction fictional demo website preview" width="1280" height="900" class="h-72 w-full object-cover object-top transition duration-500 group-hover:scale-105" decoding="async" />
+            <div class="p-5">
+              <p class="text-xs font-black uppercase tracking-[0.16em] text-electric">Example website</p>
+              <h2 class="mt-2 font-display text-2xl font-black text-navy">Contractor website sample</h2>
             </div>
-            <div class="grid gap-3 sm:grid-cols-2">
-              <img src="/work/novamart-home.jpg" alt="NovaMart Home fictional demo website preview" width="1280" height="900" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" decoding="async" />
-              <img src="/work/lumina-dental.jpg" alt="Lumina Dental Studio fictional demo website preview" width="1280" height="900" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" loading="lazy" decoding="async" />
-              <img src="/work/apexbuild.jpg" alt="ApexBuild Construction fictional demo website preview" width="1280" height="900" class="h-44 w-full rounded-2xl object-cover object-top sm:h-56" loading="lazy" decoding="async" />
-              <div class="rounded-2xl bg-navy p-6 text-white">
-                <p class="text-xs font-black uppercase tracking-[0.16em] text-lime">Managed website</p>
-                <p class="mt-4 font-display text-3xl font-black">Design, launch, hosting, updates.</p>
+          </a>
+          <div class="grid gap-4">
+            <a href="/our-work/" class="group block overflow-hidden border border-line bg-white">
+              <img src="/work/lumina-dental.jpg" alt="Lumina Dental Studio fictional demo website preview" width="1280" height="900" class="h-40 w-full object-cover object-top transition duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
+              <div class="p-4">
+                <p class="text-xs font-black uppercase tracking-[0.16em] text-electric">Healthcare</p>
+                <h2 class="mt-1 font-display text-xl font-black text-navy">Clinic sample</h2>
               </div>
+            </a>
+            <div class="bg-navy p-6 text-white">
+              <p class="text-xs font-black uppercase tracking-[0.16em] text-lime">Current offer</p>
+              <p class="mt-4 font-display text-3xl font-black leading-tight">Build, launch, host, and manage one business website.</p>
             </div>
           </div>
         </div>
@@ -56,51 +63,58 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
     </div>
   </section>
 
-  <section class="bg-white py-20">
+  <section class="bg-fog py-16">
     <div class="site-shell">
-      <SectionHeader
-        eyebrow="What businesses get"
-        title="A website partner for the parts most businesses do not want to manage."
-        copy="Webleee combines the website build with hosting, launch support, technical setup, and ongoing monthly management."
-      />
-      <div class="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <div class="grid gap-8 lg:grid-cols-[0.65fr_1.35fr] lg:items-start">
+        <SectionHeader
+          eyebrow="What businesses get"
+          title="A practical website setup handled by one partner."
+          copy="The work is not only the page design. Webleee also helps with the launch, hosting setup, and ongoing updates."
+        />
+        <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {benefits.map((benefit) => (
-          <div class="rounded-3xl border border-line bg-fog p-5">
-            <span class="mb-4 block h-2 w-12 rounded-full bg-electric"></span>
-            <h3 class="font-display text-xl font-black text-navy">{benefit}</h3>
+          <div class="border border-line bg-white p-4">
+            <h3 class="font-display text-lg font-black text-navy">{benefit}</h3>
           </div>
         ))}
-      </div>
-    </div>
-  </section>
-
-  <section class="bg-fog py-20">
-    <div class="site-shell">
-      <SectionHeader
-        eyebrow="What Webleee does"
-        title="Your website handled from first proposal to monthly support."
-        copy="The goal is simple: make it easier for a business to look professional online without managing the technical work alone."
-      />
-      <div class="mt-10 grid gap-5 lg:grid-cols-4">
-        {services.map((service) => (
-          <article class="card p-7">
-            <h3 class="font-display text-2xl font-black">{service.title}</h3>
-            <p class="mt-4 text-sm leading-7 text-slatebody">{service.copy}</p>
-          </article>
-        ))}
+        </div>
       </div>
     </div>
   </section>
 
   <section class="bg-white py-20">
+    <div class="site-shell">
+      <div class="grid gap-10 lg:grid-cols-[0.72fr_1.28fr]">
+        <div>
+          <SectionHeader
+            eyebrow="What Webleee does"
+            title="From first preview to a managed live website."
+            copy="The goal is simple: make it easier for a business to look professional online without managing technical work alone."
+          />
+          <a href="/process/" class="mt-8 btn-light">See the full process</a>
+        </div>
+        <div class="grid gap-4">
+        {services.map((service) => (
+          <article class="grid gap-5 border-l-4 border-electric bg-fog p-6 sm:grid-cols-[8rem_1fr]">
+            <h3 class="font-display text-2xl font-black">{service.title}</h3>
+            <p class="text-sm leading-7 text-slatebody">{service.copy}</p>
+          </article>
+        ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-midnight py-20 text-white">
     <div class="site-shell">
       <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
         <SectionHeader
           eyebrow="Example websites"
-          title="Explore fictional demo websites built by Webleee."
-          copy="These are fictional demo websites created by Webleee to show different styles and industries. They are not real client projects."
+          title="Explore sample websites built to show different business styles."
+          copy="These are fictional sample websites created by Webleee to show layout, tone, and industry direction."
+          light
         />
-        <a href="/our-work/" class="btn-light self-start lg:self-auto">View demo websites</a>
+        <a href="/our-work/" class="btn-on-dark self-start lg:self-auto">View example websites</a>
       </div>
       <div class="mt-10 grid gap-6 lg:grid-cols-3">
         {sampleSites.slice(0, 6).map((site) => <PortfolioCard site={site} featured />)}
@@ -118,7 +132,7 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
       />
       <div class="mt-10 grid gap-5 lg:grid-cols-5">
         {processSteps.map((step, index) => (
-          <article class="rounded-[28px] border border-white/10 bg-white/7 p-6">
+          <article class="rounded-lg border border-white/10 bg-white/7 p-6">
             <p class="font-display text-4xl font-black text-lime">{index + 1}</p>
             <h3 class="mt-5 font-display text-xl font-black">{step.title}</h3>
             <p class="mt-4 text-sm leading-7 text-white/62">{step.copy}</p>
