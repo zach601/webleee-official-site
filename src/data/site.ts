@@ -128,7 +128,7 @@ export const pricingPlans = [
   {
     name: 'Starter Website',
     fit: 'Good for small businesses that need a simple online presence.',
-    price: 'Custom quote',
+    price: 'Scope-based pricing',
     features: [
       '1-5 pages',
       'Hosting included',
