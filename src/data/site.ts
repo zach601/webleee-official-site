@@ -107,12 +107,12 @@ export const processSteps = [
     copy: 'Share what your business does, who you serve, and what kind of website you need.',
   },
   {
-    title: 'Webleee creates a homepage preview or proposal',
-    copy: 'Webleee prepares a practical first direction so you can see how your business website could be structured.',
+    title: 'Webleee scopes the website',
+    copy: 'Webleee reviews the details and prepares the practical direction, pages, launch needs, and quote scope.',
   },
   {
     title: 'You review it',
-    copy: 'You check the preview or proposal and decide what needs to change before the full website moves forward.',
+    copy: 'You check the proposed direction and decide what needs to change before the full website moves forward.',
   },
   {
     title: 'Webleee makes changes',

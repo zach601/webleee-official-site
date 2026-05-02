@@ -2,9 +2,8 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import PortfolioCard from '../components/PortfolioCard.astro';
-import PricingCards from '../components/PricingCards.astro';
 import CTA from '../components/CTA.astro';
-import { benefits, processSteps, sampleSites, services } from '../data/site';
+import { benefits, pricingPlans, processSteps, sampleSites, services } from '../data/site';
 ---
 
 <SiteLayout
@@ -12,7 +11,7 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
   description="Webleee builds, deploys, hosts, and manages modern websites for businesses that want a professional site without technical stress."
 >
   <section class="border-b border-line bg-white">
-    <div class="site-shell grid items-center gap-12 py-16 lg:grid-cols-[0.92fr_1.08fr] lg:py-24">
+    <div class="site-shell grid items-center gap-12 py-16 lg:grid-cols-[0.95fr_0.85fr] lg:py-24">
       <div class="max-w-3xl">
         <p class="eyebrow">Web design and website management</p>
         <h1 class="mt-6 heading-xl">Websites built, hosted, and managed for growing businesses.</h1>
@@ -20,8 +19,8 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
           Webleee helps businesses get a professional site live without handling hosting, deployment, DNS, updates, and technical maintenance themselves.
         </p>
         <div class="mt-9 flex flex-col gap-3 sm:flex-row">
-          <a href="/contact/" class="btn-primary">Get a free homepage preview</a>
-          <a href="/our-work/" class="btn-secondary">View example websites</a>
+          <a href="/contact/" class="btn-primary">Request a website quote</a>
+          <a href="/our-work/" class="btn-secondary">View sample websites</a>
         </div>
         <div class="mt-10 grid max-w-2xl divide-y divide-line border-y border-line sm:grid-cols-3 sm:divide-x sm:divide-y-0">
           {[
@@ -36,47 +35,68 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
           ))}
         </div>
       </div>
-      <div class="border border-line bg-fog p-4 shadow-agency">
-        <div class="grid gap-4 sm:grid-cols-[1.1fr_0.9fr]">
-          <a href="/our-work/" class="group block overflow-hidden border border-line bg-white">
-            <img src="/work/apexbuild.jpg" alt="ApexBuild Construction fictional demo website preview" width="1280" height="900" class="h-72 w-full object-cover object-top transition duration-500 group-hover:scale-105" decoding="async" />
-            <div class="p-5">
-              <p class="text-xs font-black uppercase tracking-[0.16em] text-electric">Example website</p>
-              <h2 class="mt-2 font-display text-2xl font-black text-navy">Contractor website sample</h2>
-            </div>
-          </a>
+      <aside class="rounded-xl border border-line bg-fog p-4 shadow-agency" aria-label="Website quote contact form">
+        <form class="rounded-lg bg-white p-6 text-navy sm:p-8">
+          <div class="mb-6">
+            <p class="eyebrow">Start here</p>
+            <h2 class="mt-3 font-display text-3xl font-black leading-tight">Request a website quote</h2>
+            <p class="mt-3 text-sm leading-7 text-slatebody">
+              Share the basics and Webleee can scope the build, launch setup, and monthly management. This form is UI-only until a backend is connected.
+            </p>
+          </div>
           <div class="grid gap-4">
-            <a href="/our-work/" class="group block overflow-hidden border border-line bg-white">
-              <img src="/work/lumina-dental.jpg" alt="Lumina Dental Studio fictional demo website preview" width="1280" height="900" class="h-40 w-full object-cover object-top transition duration-500 group-hover:scale-105" loading="lazy" decoding="async" />
-              <div class="p-4">
-                <p class="text-xs font-black uppercase tracking-[0.16em] text-electric">Healthcare</p>
-                <h2 class="mt-1 font-display text-xl font-black text-navy">Clinic sample</h2>
-              </div>
-            </a>
-            <div class="bg-navy p-6 text-white">
-              <p class="text-xs font-black uppercase tracking-[0.16em] text-lime">Current offer</p>
-              <p class="mt-4 font-display text-3xl font-black leading-tight">Build, launch, host, and manage one business website.</p>
+            <div>
+              <label for="home-name" class="text-sm font-black">Name</label>
+              <input id="home-name" name="name" type="text" placeholder="Your name" class="mt-2 min-h-12 w-full rounded-lg border border-line bg-fog px-4 text-sm outline-none focus:border-electric focus:ring-4 focus:ring-lime/35" />
+            </div>
+            <div>
+              <label for="home-business" class="text-sm font-black">Business name</label>
+              <input id="home-business" name="business" type="text" placeholder="Business name" class="mt-2 min-h-12 w-full rounded-lg border border-line bg-fog px-4 text-sm outline-none focus:border-electric focus:ring-4 focus:ring-lime/35" />
+            </div>
+            <div>
+              <label for="home-email" class="text-sm font-black">Email</label>
+              <input id="home-email" name="email" type="email" placeholder="Your email address" class="mt-2 min-h-12 w-full rounded-lg border border-line bg-fog px-4 text-sm outline-none focus:border-electric focus:ring-4 focus:ring-lime/35" />
+            </div>
+            <div>
+              <label for="home-project" class="text-sm font-black">Website needed</label>
+              <select id="home-project" name="website_type" class="mt-2 min-h-12 w-full rounded-lg border border-line bg-fog px-4 text-sm outline-none focus:border-electric focus:ring-4 focus:ring-lime/35">
+                <option>Business website</option>
+                <option>Website redesign</option>
+                <option>Contractor / trades website</option>
+                <option>Professional services website</option>
+                <option>Restaurant / hospitality website</option>
+                <option>Product / catalogue website</option>
+              </select>
             </div>
           </div>
-        </div>
-      </div>
+          <button type="button" class="mt-6 inline-flex min-h-12 w-full items-center justify-center rounded-lg border border-line bg-fog px-6 py-3 text-sm font-black text-slatebody">
+            Form not connected yet
+          </button>
+          <p class="mt-4 text-xs leading-6 text-slatebody">
+            Connect the form backend before using this for live enquiries.
+          </p>
+        </form>
+      </aside>
     </div>
   </section>
 
   <section class="bg-fog py-16">
     <div class="site-shell">
-      <div class="grid gap-8 lg:grid-cols-[0.65fr_1.35fr] lg:items-start">
+      <div class="grid gap-8 lg:grid-cols-[0.72fr_1.28fr] lg:items-start">
         <SectionHeader
           eyebrow="What businesses get"
-          title="A practical website setup handled by one partner."
-          copy="The work is not only the page design. Webleee also helps with the launch, hosting setup, and ongoing updates."
+          title="The practical pieces a business website needs."
+          copy="The essentials are kept simple here. Deeper details live on the pricing, process, and contact pages."
         />
-        <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {benefits.map((benefit) => (
-          <div class="border border-line bg-white p-4">
-            <h3 class="font-display text-lg font-black text-navy">{benefit}</h3>
+        <div>
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {benefits.slice(0, 6).map((benefit) => (
+              <div class="border border-line bg-white p-4">
+                <h3 class="font-display text-lg font-black text-navy">{benefit}</h3>
+              </div>
+            ))}
           </div>
-        ))}
+          <a href="/process/" class="mt-6 btn-light">See how Webleee works</a>
         </div>
       </div>
     </div>
@@ -88,13 +108,13 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
         <div>
           <SectionHeader
             eyebrow="What Webleee does"
-            title="From first preview to a managed live website."
-            copy="The goal is simple: make it easier for a business to look professional online without managing technical work alone."
+            title="Build, launch, host, and manage."
+            copy="A simple service model for businesses that want one partner handling the website instead of juggling design, hosting, DNS, and updates."
           />
           <a href="/process/" class="mt-8 btn-light">See the full process</a>
         </div>
         <div class="grid gap-4">
-        {services.map((service) => (
+        {services.slice(0, 3).map((service) => (
           <article class="grid gap-5 border-l-4 border-electric bg-fog p-6 sm:grid-cols-[8rem_1fr]">
             <h3 class="font-display text-2xl font-black">{service.title}</h3>
             <p class="text-sm leading-7 text-slatebody">{service.copy}</p>
@@ -109,15 +129,15 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
     <div class="site-shell">
       <div class="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
         <SectionHeader
-          eyebrow="Example websites"
+          eyebrow="Sample websites"
           title="Explore sample websites built to show different business styles."
-          copy="These are fictional sample websites created by Webleee to show layout, tone, and industry direction."
+          copy="A few samples are shown here. The full Our Work page has all six industry examples."
           light
         />
-        <a href="/our-work/" class="btn-on-dark self-start lg:self-auto">View example websites</a>
+        <a href="/our-work/" class="btn-on-dark self-start lg:self-auto">Show all sample websites</a>
       </div>
       <div class="mt-10 grid gap-6 lg:grid-cols-3">
-        {sampleSites.slice(0, 6).map((site) => <PortfolioCard site={site} featured />)}
+        {sampleSites.slice(0, 3).map((site) => <PortfolioCard site={site} featured />)}
       </div>
     </div>
   </section>
@@ -130,8 +150,8 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
         copy="You stay focused on your business while Webleee handles the structure, build, launch, and management."
         light
       />
-      <div class="mt-10 grid gap-5 lg:grid-cols-5">
-        {processSteps.map((step, index) => (
+      <div class="mt-10 grid gap-5 lg:grid-cols-3">
+        {processSteps.slice(0, 3).map((step, index) => (
           <article class="rounded-lg border border-white/10 bg-white/7 p-6">
             <p class="font-display text-4xl font-black text-lime">{index + 1}</p>
             <h3 class="mt-5 font-display text-xl font-black">{step.title}</h3>
@@ -139,6 +159,7 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
           </article>
         ))}
       </div>
+      <a href="/process/" class="mt-8 btn-on-dark">See all process steps</a>
     </div>
   </section>
 
@@ -152,7 +173,16 @@ import { benefits, processSteps, sampleSites, services } from '../data/site';
         />
         <a href="/pricing/" class="btn-light self-start lg:self-auto">Compare website plans</a>
       </div>
-      <PricingCards />
+      <div class="grid gap-5 lg:grid-cols-3">
+        {pricingPlans.map((plan) => (
+          <article class={`rounded-lg border p-6 ${plan.highlighted ? 'border-electric bg-navy text-white' : 'border-line bg-white text-navy'}`}>
+            <p class={`text-xs font-black uppercase tracking-[0.16em] ${plan.highlighted ? 'text-lime' : 'text-electric'}`}>Plan option</p>
+            <h3 class="mt-4 font-display text-2xl font-black">{plan.name}</h3>
+            <p class={`mt-4 text-sm leading-7 ${plan.highlighted ? 'text-white/68' : 'text-slatebody'}`}>{plan.fit}</p>
+            <p class="mt-5 font-display text-2xl font-black">{plan.price}</p>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 
