@@ -2,7 +2,7 @@
 
 The real official business website for Webleee.
 
-Webleee builds, deploys, hosts, and manages modern websites for businesses. The site explains the service, shows fictional sample websites, outlines plan options, explains the process, answers FAQs, and encourages businesses to request a website quote.
+Webleee builds, deploys, hosts, and manages modern websites for businesses. The site explains the service, shows fictional sample websites, outlines plan options, explains the process, answers FAQs, and encourages businesses to start a website enquiry.
 
 ## Live Website
 

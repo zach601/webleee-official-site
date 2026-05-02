@@ -108,7 +108,7 @@ export const processSteps = [
   },
   {
     title: 'Webleee scopes the website',
-    copy: 'Webleee reviews the details and prepares the practical direction, pages, launch needs, and quote scope.',
+    copy: 'Webleee reviews the details and prepares the practical direction, pages, launch needs, and project scope.',
   },
   {
     title: 'You review it',
